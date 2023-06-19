@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock title %}
+
+{% block body %} 
+<div class = "container -fluid px-0">
+  <img src ="https://static.vecteezy.com/system/resources/previews/001/263/984/original/contact-us-concept-free-photo.jpg" width="1600" height="600"class="d-block w-100 " alt="..." 
+</div>
+<div class = "container">
+  <p style="line-height:35.5em;">  </p>
+  <h1 class ="text-center" style="font-family: Garamond, font-size:+5" > <b> Contact Us </b></h1>
+    <form method ="post" action="/contact">
+  {% csrf_token %}
+      <p style="line-height:35.5em;">  </p>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-12">
+          <label for="first_name">First name</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" value="Enter your first name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="last_name">Last name</label>
+          <input type="text" class="form-control" id="last_name" name="last_name" value="Enter your last name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone_number">* What’s your phone number ?</label>
+          <input type="phone" class="form-control" id="phone_number" name="phone_number" value="Enter your phone number" required />
+      </div>
+        <div class="col-12">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" name="city" value="Enter the name of your city" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" name="state" value="Enter the name of your state" required>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="zip">Zip</label>
+          <input type="text" class="form-control" id="zip" name="zip" value="Enter your zip code" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="address_1" >Address 1</label>
+          <input type="text" class="form-control" id="address_1" name="address_1" value="1234 Main St" required>
+        </div>
+        <div class="col-12">
+          <label for="address_2" >Address 2</label>
+          <input type="text" class="form-control" id="address_2" name="address_2" value="Apartment, studio, or floor" required>
+        </div>
+        <div class="col-12">
+            <label for="email_address" >Email address</label>
+            <input type="email" class="form-control" id="email_address" name="email_address" value="Enter your email-id" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="col-12">
+            <label for="password" >Password</label>
+            <input type="password" id="password" class="form-control" id="password" name="password" value="Enter your password" aria-labelledby="passwordHelpBlock" required>
+            <div id="passwordHelpBlock" class="form-text">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" name ="comments" id="comments" style="height: 100px"></textarea>
+          <label for="Comments">Comments</label>
+        </div>
+        <p style="line-height:5.5em;">  </p>
+        <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <p style="line-height:5.5em;" >  </p>
+          <div style="text-align:center">
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit" align="center">Submit form</button>
+          </div>
+    </div>
+  </form>
+  
+
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#" class="text-white">Back to top</a>
+    </p>
+    <p class="mb-1" class="text-dark-black">  &copy; 2022-2023| Ankita Ice-cream Store</p>
+    <p class="mb-0">New to Ankita Ice-cream Store? <a href="/" class="text-white" >Visit the homepage</a> or read our <a class="text-white" href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+{% endblock body %}
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    </body>
+</html>
